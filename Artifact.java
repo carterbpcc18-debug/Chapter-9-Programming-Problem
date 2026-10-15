@@ -8,6 +8,9 @@ public class Artifact {
 
     public static void main(String[] args) {
         DivineWeapon stormWeapon = new DivineWeapon("Storm");
+        System.out.println();
+
+        DivineWeapon defaultWeapon = new DivineWeapon();
     }
 }
 
@@ -19,5 +22,9 @@ class DivineWeapon extends Artifact {
         this.essenceType = essenceType;
         System.out.println("Its essence is now glowing with "
                 + essenceType + " energy.");
+    }
+
+    public DivineWeapon() {
+        this("Pure Sunlight");
     }
 }
