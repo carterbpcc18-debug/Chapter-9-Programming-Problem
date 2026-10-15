@@ -45,3 +45,15 @@ Its essence is now glowing with Storm energy.
 A relic of Celestial Bronze is being forged.
 Its essence is now glowing with Pure Sunlight energy.
 The output confirms that both constructors initialize the weapon correctly. The custom constructor uses Storm, while the no-argument constructor uses Pure Sunlight. In both cases, the superclass material message appears before the essence message. This phase helped me understand how constructor chaining reduces code duplication.
+
+
+
+Phase 4: Validation & Reflection
+What bugs or unexpected behaviors did I catch while testing?
+Everything went as expected during testing. The program compiled and ran successfully without any errors or unexpected behavior. Both the custom and default DivineWeapon objects initialized correctly. The material message appeared before the essence message for each weapon, and the default constructor correctly used Pure Sunlight as its essence type.
+
+AI review and constructor logic
+I reviewed the constructor logic and confirmed that it worked as intended. The super("Celestial Bronze") call initializes the material through the Artifact superclass constructor, while this("Pure Sunlight") allows the no-argument constructor to reuse the parameterized constructor without duplicating code. I confirmed that both constructor calls are placed correctly as the first statement in their respective constructors.
+
+Final verification
+The final program successfully demonstrated inheritance, superclass constructor calls, and constructor chaining. Both the custom Storm weapon and the default Pure Sunlight weapon printed their messages in the expected order. No changes were necessary because everything worked as intended.
